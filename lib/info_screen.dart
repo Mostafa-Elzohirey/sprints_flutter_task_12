@@ -31,16 +31,21 @@ class DeviceInfoScreen extends StatelessWidget {
       future: deviceInfoPlugin.androidInfo,
       builder: (context, snapshot) {
         if (snapshot.hasError) {
-          return Center(child: Text(snapshot.error.toString()));
+          return Center(
+            child: Text(
+              snapshot.error.toString(),
+            ),
+          );
         } else if (snapshot.hasData) {
           AndroidDeviceInfo info = snapshot.data!;
           return SingleChildScrollView(
             padding: const EdgeInsets.all(20),
             child: Column(
               children: [
-                item('Android Model', info.model),//device model
-                item('Android Version', info.version.release),//android version
-                item('Android SDK Int', info.version.sdkInt.toString()),
+                item('Android Model', info.model), //device model
+                item('Android Version', info.version.release), //android version
+                item('Android SDK Int',
+                    info.version.sdkInt.toString()), //sdk version
               ],
             ),
           );
