@@ -12,3 +12,8 @@ this app contains one function that uses the [device info plus](https://pub.dev/
 ## permissions
 this app requires no permissions from the device to run
 
+## Used Packages
+
+- [device info plus](https://pub.dev/packages/device_info_plus)
+
+
